@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --ivory: #F9F7F2;
     --charcoal: #1C1C1A;
@@ -17,539 +16,90 @@
     --gold: #B07D35;
     --border: rgba(28,28,26,0.10);
   }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--ivory);
-    color: var(--charcoal);
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 2.5rem;
-    border-bottom: 1px solid var(--border);
-    background: var(--ivory);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.25rem;
-    color: var(--accent);
-    letter-spacing: -0.01em;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    font-size: 14px;
-    color: var(--mid);
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-
+  body { font-family: 'DM Sans', sans-serif; background: var(--ivory); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--border); background: var(--ivory); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--accent); letter-spacing: -0.01em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; color: var(--mid); font-weight: 400; transition: color 0.2s; }
   .nav-links a:hover { color: var(--charcoal); }
-
-  .nav-cta {
-    background: var(--accent);
-    color: #fff !important;
-    padding: 8px 20px;
-    border-radius: 100px;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-  }
-
-  /* HERO */
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding: 5rem 2.5rem 5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    align-items: center;
-  }
-
-  .hero-label {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: var(--charcoal);
-    margin-bottom: 1.25rem;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero p {
-    font-size: 17px;
-    color: var(--mid);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-
-  .btn-row {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #fff;
-    padding: 13px 28px;
-    border-radius: 100px;
-    border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: opacity 0.2s;
-  }
-
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 100px; font-size: 14px !important; font-weight: 500 !important; }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; align-items: center; }
+  .hero-label { display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+  .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 1.25rem; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p { font-size: 17px; color: var(--mid); line-height: 1.7; margin-bottom: 2rem; }
+  .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #fff; padding: 13px 28px; border-radius: 100px; border: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
   .btn-primary:hover { opacity: 0.85; }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--charcoal);
-    padding: 13px 28px;
-    border-radius: 100px;
-    border: 1px solid var(--border);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: border-color 0.2s;
-  }
-
+  .btn-outline { background: transparent; color: var(--charcoal); padding: 13px 28px; border-radius: 100px; border: 1px solid var(--border); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 400; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s; }
   .btn-outline:hover { border-color: var(--charcoal); }
-
-  .hero-visual {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .stat-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.5rem;
-  }
-
-  .stat-card.accent-bg {
-    background: var(--accent);
-    color: #fff;
-    border-color: transparent;
-  }
-
-  .stat-number {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.25rem;
-    line-height: 1;
-    color: var(--charcoal);
-    margin-bottom: 0.4rem;
-  }
-
+  .hero-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+  .stat-card.accent-bg { background: var(--accent); color: #fff; border-color: transparent; }
+  .stat-number { font-family: 'DM Serif Display', serif; font-size: 2.25rem; line-height: 1; color: var(--charcoal); margin-bottom: 0.4rem; }
   .stat-card.accent-bg .stat-number { color: #fff; }
-
-  .stat-label {
-    font-size: 13px;
-    color: var(--mid);
-    line-height: 1.4;
-  }
-
+  .stat-label { font-size: 13px; color: var(--mid); line-height: 1.4; }
   .stat-card.accent-bg .stat-label { color: rgba(255,255,255,0.75); }
-
-  .stat-card.span-full {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .icon-circle {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
+  .stat-card.span-full { grid-column: 1 / -1; display: flex; align-items: center; gap: 1rem; }
+  .icon-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .icon-circle svg { width: 20px; height: 20px; }
-
-  /* DIVIDER */
-  .section-divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0 2.5rem;
-  }
-
-  /* PATHS SECTION */
-  .paths {
-    padding: 5rem 2.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .section-tag {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 0.75rem;
-  }
-
-  .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.75rem, 3vw, 2.4rem);
-    letter-spacing: -0.02em;
-    color: var(--charcoal);
-    margin-bottom: 1rem;
-  }
-
-  .section-intro {
-    font-size: 17px;
-    color: var(--mid);
-    max-width: 550px;
-    margin-bottom: 3rem;
-  }
-
-  .paths-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .path-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .path-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--accent);
-  }
-
+  .section-divider { border: none; border-top: 1px solid var(--border); margin: 0 2.5rem; }
+  .paths { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+  .section-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.75rem, 3vw, 2.4rem); letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 1rem; }
+  .section-intro { font-size: 17px; color: var(--mid); max-width: 550px; margin-bottom: 3rem; }
+  .paths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .path-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 2rem; position: relative; overflow: hidden; text-decoration: none; display: block; transition: transform 0.2s, box-shadow 0.2s; }
+  .path-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+  .path-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
   .path-card.gold-line::before { background: var(--gold); }
-
-  .path-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.25rem;
-  }
-
+  .path-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
   .path-icon.gold { background: #F5EDDD; }
-
   .path-icon svg { width: 24px; height: 24px; }
-
-  .path-card h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.3rem;
-    color: var(--charcoal);
-    margin-bottom: 0.75rem;
-    letter-spacing: -0.01em;
-  }
-
-  .path-card p {
-    font-size: 14px;
-    color: var(--mid);
-    line-height: 1.65;
-    margin-bottom: 1.25rem;
-  }
-
-  .path-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .path-list li {
-    font-size: 13px;
-    color: var(--charcoal);
-    padding-left: 1rem;
-    position: relative;
-  }
-
-  .path-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
+  .path-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--charcoal); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+  .path-card p { font-size: 14px; color: var(--mid); line-height: 1.65; margin-bottom: 1.25rem; }
+  .path-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .path-list li { font-size: 13px; color: var(--charcoal); padding-left: 1rem; position: relative; }
+  .path-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
   .path-card.gold-line .path-list li::before { background: var(--gold); }
-
-  /* STEPS SECTION */
-  .steps-section {
-    background: var(--accent);
-    padding: 5rem 2.5rem;
-    color: #fff;
-  }
-
-  .steps-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
+  .steps-section { background: var(--accent); padding: 5rem 2.5rem; color: #fff; }
+  .steps-inner { max-width: 1100px; margin: 0 auto; }
   .steps-section .section-tag { color: rgba(255,255,255,0.6); }
   .steps-section .section-title { color: #fff; }
   .steps-section .section-intro { color: rgba(255,255,255,0.75); }
-
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .step {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 16px;
-    padding: 1.5rem;
-  }
-
-  .step-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.5rem;
-    color: rgba(255,255,255,0.25);
-    margin-bottom: 0.75rem;
-    line-height: 1;
-  }
-
-  .step h4 {
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-
-  .step p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.6;
-  }
-
-  /* TESTIMONIALS */
-  .testimonials {
-    padding: 5rem 2.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.25rem;
-    margin-top: 3rem;
-  }
-
-  .testimonial-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .quote-mark {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-    color: var(--accent);
-    line-height: 0.8;
-    margin-bottom: -0.25rem;
-  }
-
-  .testimonial-card blockquote {
-    font-size: 14px;
-    color: var(--charcoal);
-    line-height: 1.65;
-    flex: 1;
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-top: 1px solid var(--border);
-    padding-top: 1rem;
-  }
-
-  .author-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--accent);
-  }
-
-  .author-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--charcoal);
-  }
-
-  .author-desc {
-    font-size: 12px;
-    color: var(--mid);
-  }
-
-  /* CTA BAND */
-  .cta-band {
-    margin: 0 2.5rem 5rem;
-    background: var(--charcoal);
-    border-radius: 24px;
-    padding: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  .cta-band h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    color: #fff;
-    letter-spacing: -0.02em;
-    max-width: 500px;
-  }
-
-  .cta-band h2 em {
-    font-style: italic;
-    color: #A8CBBA;
-  }
-
-  .cta-band-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-shrink: 0;
-  }
-
-  .btn-white {
-    background: #fff;
-    color: var(--charcoal);
-    padding: 13px 28px;
-    border-radius: 100px;
-    border: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: opacity 0.2s;
-  }
-
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .step { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 1.5rem; }
+  .step-num { font-family: 'DM Serif Display', serif; font-size: 2.5rem; color: rgba(255,255,255,0.25); margin-bottom: 0.75rem; line-height: 1; }
+  .step h4 { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 0.5rem; }
+  .step p { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+  .testimonials { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+  .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin-top: 3rem; }
+  .testimonial-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+  .quote-mark { font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--accent); line-height: 0.8; margin-bottom: -0.25rem; }
+  .testimonial-card blockquote { font-size: 14px; color: var(--charcoal); line-height: 1.65; flex: 1; }
+  .testimonial-author { display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--border); padding-top: 1rem; }
+  .author-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: var(--accent); }
+  .author-name { font-size: 13px; font-weight: 500; color: var(--charcoal); }
+  .author-desc { font-size: 12px; color: var(--mid); }
+  .cta-band { margin: 0 2.5rem 5rem; background: var(--charcoal); border-radius: 24px; padding: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+  .cta-band h2 { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); color: #fff; letter-spacing: -0.02em; max-width: 500px; }
+  .cta-band h2 em { font-style: italic; color: #A8CBBA; }
+  .cta-band-buttons { display: flex; gap: 1rem; flex-shrink: 0; }
+  .btn-white { background: #fff; color: var(--charcoal); padding: 13px 28px; border-radius: 100px; border: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
   .btn-white:hover { opacity: 0.9; }
-
-  .btn-ghost-white {
-    background: transparent;
-    color: #fff;
-    padding: 13px 28px;
-    border-radius: 100px;
-    border: 1px solid rgba(255,255,255,0.3);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: border-color 0.2s;
-  }
-
+  .btn-ghost-white { background: transparent; color: #fff; padding: 13px 28px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.3); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 400; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s; }
   .btn-ghost-white:hover { border-color: rgba(255,255,255,0.7); }
-
-  /* FOOTER */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    color: var(--mid);
-  }
-
-  footer .logo { font-size: 1rem; }
-
-  .footer-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .footer-links a {
-    text-decoration: none;
-    color: var(--mid);
-  }
-
+  footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mid); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { text-decoration: none; color: var(--mid); }
   .footer-links a:hover { color: var(--charcoal); }
-
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; }
     .hero-visual { display: none; }
     .paths-grid { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr 1fr; }
-    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-column: 1fr; }
     .cta-band { flex-direction: column; text-align: center; }
     .cta-band-buttons { justify-content: center; }
     nav { padding: 1rem 1.25rem; }
@@ -558,15 +108,14 @@
 </style>
 </head>
 <body>
-
 <nav>
-  <div class="logo">ClearPath Financial</div>
+  <a href="index.html" class="logo">ClearPath Financial</a>
   <ul class="nav-links">
-    <li><a href="#">About</a></li>
-    <li><a href="#">For Everyone</a></li>
-    <li><a href="#">Reentry Support</a></li>
-    <li><a href="#">Resources</a></li>
-    <li><a href="#" class="nav-cta">Get started</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="for-everyone.html">For Everyone</a></li>
+    <li><a href="reentry.html">Reentry Support</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="get-started.html" class="nav-cta">Get started</a></li>
   </ul>
 </nav>
 
@@ -576,11 +125,10 @@
     <h1>Your money.<br><em>Your future.</em><br>Your fresh start.</h1>
     <p>Poor financial decisions affect millions of people — and a justice record shouldn't define what's possible. We help everyone build smarter money habits and a more stable life.</p>
     <div class="btn-row">
-      <a href="#" class="btn-primary">Start learning for free</a>
-      <a href="#" class="btn-outline">Reentry resources</a>
+      <a href="get-started.html" class="btn-primary">Start learning for free</a>
+      <a href="reentry.html" class="btn-outline">Reentry resources</a>
     </div>
   </div>
-
   <div class="hero-visual">
     <div class="stat-card accent-bg">
       <div class="stat-number">77M</div>
@@ -592,9 +140,7 @@
     </div>
     <div class="stat-card span-full">
       <div class="icon-circle">
-        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       </div>
       <div>
         <div style="font-size:14px;font-weight:500;color:var(--charcoal);margin-bottom:2px;">Free for everyone</div>
@@ -610,13 +156,10 @@
   <div class="section-tag">Two paths, one goal</div>
   <h2 class="section-title">Wherever you're starting from</h2>
   <p class="section-intro">Whether you've made financial mistakes or you're rebuilding after incarceration, we have a clear path forward for you.</p>
-
   <div class="paths-grid">
-    <div class="path-card">
+    <a href="for-everyone.html" class="path-card">
       <div class="path-icon">
-        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       </div>
       <h3>Smart money habits</h3>
       <p>For anyone struggling with debt, overspending, or simply never having been taught how to manage money well.</p>
@@ -627,13 +170,10 @@
         <li>Avoiding predatory loans and scams</li>
         <li>Emergency fund planning</li>
       </ul>
-    </div>
-
-    <div class="path-card gold-line">
+    </a>
+    <a href="reentry.html" class="path-card gold-line">
       <div class="path-icon gold">
-        <svg fill="none" viewBox="0 0 24 24" stroke="#B07D35" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-        </svg>
+        <svg fill="none" viewBox="0 0 24 24" stroke="#B07D35" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
       </div>
       <h3>Reentry financial support</h3>
       <p>For people returning from incarceration who face additional barriers to housing, employment, and banking access.</p>
@@ -644,7 +184,7 @@
         <li>Securing housing with a background check</li>
         <li>Benefits eligibility and government programs</li>
       </ul>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -653,28 +193,11 @@
     <div class="section-tag">How it works</div>
     <h2 class="section-title">Four steps to a stronger foundation</h2>
     <p class="section-intro">Our approach is practical, judgment-free, and built around real obstacles people face.</p>
-
     <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h4>Assess your situation</h4>
-        <p>Tell us where you are — debt, reentry, first-time budgeter. We meet you there.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h4>Get your personalized plan</h4>
-        <p>A clear, step-by-step action plan built around your specific circumstances and goals.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h4>Learn and apply</h4>
-        <p>Short, practical lessons you can put into action immediately — no jargon, no fluff.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <h4>Track your progress</h4>
-        <p>Celebrate real milestones as your financial health improves over time.</p>
-      </div>
+      <div class="step"><div class="step-num">01</div><h4>Assess your situation</h4><p>Tell us where you are — debt, reentry, first-time budgeter. We meet you there.</p></div>
+      <div class="step"><div class="step-num">02</div><h4>Get your personalized plan</h4><p>A clear, step-by-step action plan built around your specific circumstances and goals.</p></div>
+      <div class="step"><div class="step-num">03</div><h4>Learn and apply</h4><p>Short, practical lessons you can put into action immediately — no jargon, no fluff.</p></div>
+      <div class="step"><div class="step-num">04</div><h4>Track your progress</h4><p>Celebrate real milestones as your financial health improves over time.</p></div>
     </div>
   </div>
 </section>
@@ -683,42 +206,21 @@
   <div class="section-tag">Real stories</div>
   <h2 class="section-title">People who found their footing</h2>
   <p class="section-intro">Across backgrounds, circumstances, and starting points — here's what's possible.</p>
-
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
       <blockquote>I had no idea what a credit score even meant until I found this. Three months later I opened my first real savings account. It felt huge.</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar">DM</div>
-        <div>
-          <div class="author-name">Darnell M.</div>
-          <div class="author-desc">Atlanta, GA</div>
-        </div>
-      </div>
+      <div class="testimonial-author"><div class="author-avatar">DM</div><div><div class="author-name">Darnell M.</div><div class="author-desc">Atlanta, GA</div></div></div>
     </div>
-
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
       <blockquote>After I got out, every bank turned me away. ClearPath showed me exactly which accounts I could qualify for and how to start building from there.</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar">TR</div>
-        <div>
-          <div class="author-name">Tanya R.</div>
-          <div class="author-desc">Reentry participant</div>
-        </div>
-      </div>
+      <div class="testimonial-author"><div class="author-avatar">TR</div><div><div class="author-name">Tanya R.</div><div class="author-desc">Reentry participant</div></div></div>
     </div>
-
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
       <blockquote>I kept making the same money mistakes my parents made. This program broke that cycle for me and my kids. I finally feel in control.</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar">SL</div>
-        <div>
-          <div class="author-name">Sandra L.</div>
-          <div class="author-desc">Single parent, Ohio</div>
-        </div>
-      </div>
+      <div class="testimonial-author"><div class="author-avatar">SL</div><div><div class="author-name">Sandra L.</div><div class="author-desc">Single parent, Ohio</div></div></div>
     </div>
   </div>
 </section>
@@ -726,21 +228,20 @@
 <div class="cta-band">
   <h2>Everyone deserves a <em>real second chance</em> — including with their finances.</h2>
   <div class="cta-band-buttons">
-    <a href="#" class="btn-white">Start for free</a>
-    <a href="#" class="btn-ghost-white">Learn more</a>
+    <a href="get-started.html" class="btn-white">Start for free</a>
+    <a href="about.html" class="btn-ghost-white">Learn more</a>
   </div>
 </div>
 
 <footer>
-  <div class="logo">ClearPath Financial</div>
+  <a href="index.html" class="logo">ClearPath Financial</a>
   <ul class="footer-links">
     <li><a href="#">Privacy</a></li>
     <li><a href="#">Terms</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="get-started.html">Contact</a></li>
     <li><a href="#">Accessibility</a></li>
   </ul>
   <div>© 2026 ClearPath Financial. All rights reserved.</div>
 </footer>
-
 </body>
 </html>

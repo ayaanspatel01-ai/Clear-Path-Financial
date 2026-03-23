@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Get Started — ClearPath Financial</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ivory: #F9F7F2; --charcoal: #1C1C1A; --mid: #6B6B65; --accent: #2E6B4F; --accent-light: #E5F0EB; --gold: #B07D35; --border: rgba(28,28,26,0.10); }
+  body { font-family: 'DM Sans', sans-serif; background: var(--ivory); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--border); background: var(--ivory); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--accent); letter-spacing: -0.01em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; color: var(--mid); font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 100px; }
+  .main { max-width: 1100px; margin: 0 auto; padding: 5rem 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .left h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 3.5vw, 2.75rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  .left h1 em { font-style: italic; color: var(--accent); }
+  .left p { font-size: 16px; color: var(--mid); margin-bottom: 2.5rem; line-height: 1.7; }
+  .trust-items { display: flex; flex-direction: column; gap: 1rem; }
+  .trust-item { display: flex; align-items: center; gap: 0.75rem; font-size: 14px; color: var(--charcoal); }
+  .trust-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .form-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; padding: 2.5rem; }
+  .form-card h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .form-card .subtitle { font-size: 14px; color: var(--mid); margin-bottom: 2rem; }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label { display: block; font-size: 13px; font-weight: 500; color: var(--charcoal); margin-bottom: 0.4rem; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--charcoal); background: var(--ivory); outline: none; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); background: #fff; }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .btn-submit { width: 100%; background: var(--accent); color: #fff; padding: 14px; border-radius: 100px; border: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; margin-top: 0.5rem; }
+  .btn-submit:hover { opacity: 0.85; }
+  .form-note { font-size: 12px; color: var(--mid); text-align: center; margin-top: 1rem; }
+  .success-msg { display: none; background: var(--accent-light); border: 1px solid #A8D4BC; border-radius: 14px; padding: 1.5rem; text-align: center; }
+  .success-msg h3 { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--accent); margin-bottom: 0.4rem; }
+  .success-msg p { font-size: 14px; color: var(--mid); }
+  footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mid); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { text-decoration: none; color: var(--mid); }
+  @media (max-width: 768px) { .main { grid-template-columns: 1fr; gap: 2.5rem; } .form-row { grid-template-columns: 1fr; } nav { padding: 1rem 1.25rem; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="for-everyone.html">For Everyone</a></li>
+    <li><a href="reentry.html">Reentry Support</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="get-started.html" class="nav-cta active">Get started</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+  <div class="left">
+    <h1>Let's build your <em>fresh start</em> together.</h1>
+    <p>Tell us a little about your situation and we'll reach out with a personalized plan and the right resources for you — completely free, no strings attached.</p>
+    <div class="trust-items">
+      <div class="trust-item"><div class="trust-dot"></div>100% free — no credit card, ever</div>
+      <div class="trust-item"><div class="trust-dot"></div>No judgment about your past</div>
+      <div class="trust-item"><div class="trust-dot"></div>Your information is kept private</div>
+      <div class="trust-item"><div class="trust-dot"></div>We respond within 1–2 business days</div>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h2>Get your free plan</h2>
+    <p class="subtitle">Fill out the form below and we'll be in touch.</p>
+
+    <div id="form-area">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" id="fname" placeholder="Marcus" />
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" id="lname" placeholder="Johnson" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" id="email" placeholder="you@email.com" />
+      </div>
+
+      <div class="form-group">
+        <label>What best describes your situation?</label>
+        <select id="situation">
+          <option value="">Select one...</option>
+          <option>I'm struggling with debt or overspending</option>
+          <option>I'm returning from incarceration</option>
+          <option>I have no credit history and want to build it</option>
+          <option>I want to start saving but don't know how</option>
+          <option>I need help with all of the above</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>What's your biggest challenge right now?</label>
+        <textarea id="challenge" placeholder="Tell us what you're dealing with — the more detail the better..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Your state</label>
+        <select id="state">
+          <option value="">Select your state...</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+          <option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
+          <option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+          <option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option>
+          <option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option>
+          <option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+          <option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option>
+          <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option>
+          <option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+          <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
+          <option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option>
+          <option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
+          <option>Wisconsin</option><option>Wyoming</option>
+        </select>
+      </div>
+
+      <button class="btn-submit" onclick="submitForm()">Send my information →</button>
+      <p class="form-note">We never sell or share your information with third parties.</p>
+    </div>
+
+    <div class="success-msg" id="success">
+      <h3>You're on your way.</h3>
+      <p>Thanks for reaching out. We'll review your information and be in touch within 1–2 business days with your personalized plan.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="get-started.html">Contact</a></li>
+  </ul>
+  <div>© 2026 ClearPath Financial. All rights reserved.</div>
+</footer>
+
+<script>
+function submitForm() {
+  var fname = document.getElementById('fname').value;
+  var email = document.getElementById('email').value;
+  var situation = document.getElementById('situation').value;
+  if (!fname || !email || !situation) {
+    alert('Please fill in your name, email, and situation before submitting.');
+    return;
+  }
+  document.getElementById('form-area').style.display = 'none';
+  document.getElementById('success').style.display = 'block';
+}
+</script>
+</body>
+</html>

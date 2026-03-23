@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resources — ClearPath Financial</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ivory: #F9F7F2; --charcoal: #1C1C1A; --mid: #6B6B65; --accent: #2E6B4F; --accent-light: #E5F0EB; --gold: #B07D35; --border: rgba(28,28,26,0.10); }
+  body { font-family: 'DM Sans', sans-serif; background: var(--ivory); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--border); background: var(--ivory); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--accent); letter-spacing: -0.01em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; color: var(--mid); font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 100px; }
+  .page-hero { padding: 5rem 2.5rem 3rem; max-width: 800px; margin: 0 auto; }
+  .section-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p { font-size: 18px; color: var(--mid); max-width: 600px; }
+  .content { max-width: 1100px; margin: 0 auto; padding: 3rem 2.5rem 5rem; }
+  .resource-section { margin-bottom: 3.5rem; }
+  .resource-section h2 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .resource-section > p { font-size: 15px; color: var(--mid); margin-bottom: 1.5rem; }
+  .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .resource-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .resource-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+  .resource-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .resource-card h4 { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 3px; }
+  .resource-card p { font-size: 13px; color: var(--mid); line-height: 1.5; }
+  .resource-card .link-label { font-size: 12px; color: var(--accent); margin-top: 6px; font-weight: 500; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+  .download-section h2 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .download-section > p { font-size: 15px; color: var(--mid); margin-bottom: 1.5rem; }
+  .download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .download-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; text-align: center; }
+  .download-card .doc-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .download-card h4 { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 0.4rem; }
+  .download-card p { font-size: 13px; color: var(--mid); margin-bottom: 1rem; line-height: 1.5; }
+  .btn-download { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 8px 18px; border-radius: 100px; font-size: 13px; font-weight: 500; text-decoration: none; }
+  footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mid); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { text-decoration: none; color: var(--mid); }
+  @media (max-width: 768px) { .resource-grid, .download-grid { grid-template-columns: 1fr; } nav { padding: 1rem 1.25rem; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="for-everyone.html">For Everyone</a></li>
+    <li><a href="reentry.html">Reentry Support</a></li>
+    <li><a href="resources.html" class="active">Resources</a></li>
+    <li><a href="get-started.html" class="nav-cta">Get started</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-tag">Tools & links</div>
+  <h1>Resources to help you <em>move forward</em></h1>
+  <p>Trusted organizations, free tools, and downloadable guides — all in one place.</p>
+</div>
+
+<div class="content">
+  <div class="resource-section">
+    <h2>Financial tools</h2>
+    <p>Free tools to help you budget, check your credit, and manage your money.</p>
+    <div class="resource-grid">
+      <a href="https://www.annualcreditreport.com" target="_blank" class="resource-card">
+        <div class="resource-icon">📋</div>
+        <div><h4>AnnualCreditReport.com</h4><p>Get your free credit reports from all three bureaus — Equifax, Experian, and TransUnion.</p><div class="link-label">annualcreditreport.com ↗</div></div>
+      </a>
+      <a href="https://www.consumerfinance.gov" target="_blank" class="resource-card">
+        <div class="resource-icon">🏛️</div>
+        <div><h4>Consumer Financial Protection Bureau</h4><p>File complaints, learn your rights, and access free financial education tools.</p><div class="link-label">consumerfinance.gov ↗</div></div>
+      </a>
+      <a href="https://www.nfcc.org" target="_blank" class="resource-card">
+        <div class="resource-icon">🤝</div>
+        <div><h4>National Foundation for Credit Counseling</h4><p>Connect with a free, certified nonprofit credit counselor near you.</p><div class="link-label">nfcc.org ↗</div></div>
+      </a>
+      <a href="https://www.benefits.gov" target="_blank" class="resource-card">
+        <div class="resource-icon">✅</div>
+        <div><h4>Benefits.gov</h4><p>Find federal benefits programs you may qualify for, including food, housing, and healthcare assistance.</p><div class="link-label">benefits.gov ↗</div></div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <div class="resource-section">
+    <h2>Reentry organizations</h2>
+    <p>National and local organizations that support people returning from incarceration.</p>
+    <div class="resource-grid">
+      <a href="https://www.reentrycouncil.org" target="_blank" class="resource-card">
+        <div class="resource-icon">🔑</div>
+        <div><h4>National Reentry Resource Center</h4><p>Find reentry programs, housing, and services in your state after release.</p><div class="link-label">reentrycouncil.org ↗</div></div>
+      </a>
+      <a href="https://www.prisonpolicy.org" target="_blank" class="resource-card">
+        <div class="resource-icon">📊</div>
+        <div><h4>Prison Policy Initiative</h4><p>Research and resources on the economic impacts of incarceration and reentry barriers.</p><div class="link-label">prisonpolicy.org ↗</div></div>
+      </a>
+      <a href="https://www.joincampaign.org" target="_blank" class="resource-card">
+        <div class="resource-icon">💼</div>
+        <div><h4>70 Million Jobs</h4><p>A job platform specifically for people with criminal records, connecting them with fair-chance employers.</p><div class="link-label">70millionjobs.com ↗</div></div>
+      </a>
+      <a href="https://www.selfhelp.org" target="_blank" class="resource-card">
+        <div class="resource-icon">🏠</div>
+        <div><h4>Local Reentry Housing Finder</h4><p>Search transitional and reentry housing programs available in your area by zip code.</p><div class="link-label">Search housing ↗</div></div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <div class="download-section">
+    <h2>Downloadable guides</h2>
+    <p>Free PDF guides you can save, print, and share.</p>
+    <div class="download-grid">
+      <div class="download-card">
+        <div class="doc-icon">📄</div>
+        <h4>Beginner's Budget Worksheet</h4>
+        <p>A simple one-page template to track your income and expenses each month.</p>
+        <a href="#" class="btn-download">Download PDF</a>
+      </div>
+      <div class="download-card">
+        <div class="doc-icon">📄</div>
+        <h4>Reentry Financial Checklist</h4>
+        <p>Step-by-step checklist for getting your finances in order after release.</p>
+        <a href="#" class="btn-download">Download PDF</a>
+      </div>
+      <div class="download-card">
+        <div class="doc-icon">📄</div>
+        <h4>Credit Building Roadmap</h4>
+        <p>A 12-month plan for building credit from zero using safe, legal methods.</p>
+        <a href="#" class="btn-download">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="get-started.html">Contact</a></li>
+  </ul>
+  <div>© 2026 ClearPath Financial. All rights reserved.</div>
+</footer>
+</body>
+</html>

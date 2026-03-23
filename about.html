@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — ClearPath Financial</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ivory: #F9F7F2; --charcoal: #1C1C1A; --mid: #6B6B65; --accent: #2E6B4F; --accent-light: #E5F0EB; --gold: #B07D35; --border: rgba(28,28,26,0.10); }
+  body { font-family: 'DM Sans', sans-serif; background: var(--ivory); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--border); background: var(--ivory); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--accent); letter-spacing: -0.01em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; color: var(--mid); font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 100px; }
+  .page-hero { padding: 5rem 2.5rem 3rem; max-width: 800px; margin: 0 auto; }
+  .section-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p { font-size: 18px; color: var(--mid); max-width: 600px; }
+  .content { max-width: 1100px; margin: 0 auto; padding: 3rem 2.5rem 5rem; }
+  .mission-block { background: var(--accent); border-radius: 24px; padding: 3.5rem; color: #fff; margin-bottom: 4rem; }
+  .mission-block h2 { font-family: 'DM Serif Display', serif; font-size: 2rem; margin-bottom: 1rem; }
+  .mission-block p { font-size: 17px; color: rgba(255,255,255,0.85); line-height: 1.75; max-width: 650px; }
+  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+  .value-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; }
+  .value-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--accent-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+  .value-icon svg { width: 22px; height: 22px; }
+  .value-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .value-card p { font-size: 14px; color: var(--mid); line-height: 1.65; }
+  .team-section h2 { font-family: 'DM Serif Display', serif; font-size: 2rem; margin-bottom: 0.75rem; }
+  .team-section .intro { font-size: 16px; color: var(--mid); margin-bottom: 2.5rem; max-width: 550px; }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .team-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+  .team-avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--accent); flex-shrink: 0; }
+  .team-name { font-weight: 500; font-size: 15px; color: var(--charcoal); }
+  .team-role { font-size: 13px; color: var(--mid); }
+  footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mid); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { text-decoration: none; color: var(--mid); }
+  @media (max-width: 768px) { .values-grid, .team-grid { grid-template-columns: 1fr; } nav { padding: 1rem 1.25rem; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="for-everyone.html">For Everyone</a></li>
+    <li><a href="reentry.html">Reentry Support</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="get-started.html" class="nav-cta">Get started</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-tag">Our story</div>
+  <h1>Built for people who deserve a <em>fair shot</em></h1>
+  <p>ClearPath Financial was created because too many people are left behind by a financial system that wasn't designed with them in mind.</p>
+</div>
+
+<div class="content">
+  <div class="mission-block">
+    <h2>Our mission</h2>
+    <p>We believe that financial stability is a right, not a privilege. Whether you're dealing with debt, recovering from past mistakes, or rebuilding after incarceration — everyone deserves clear, honest guidance and the tools to build a better future. We exist to make that possible, for free, without judgment.</p>
+  </div>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      </div>
+      <h3>Compassion first</h3>
+      <p>We don't judge how you got here. We only focus on where you're going and how we can help you get there.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <h3>Radical honesty</h3>
+      <p>We give you real information, not sugarcoated advice. You deserve to know the truth about your financial situation.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="#2E6B4F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </div>
+      <h3>Community driven</h3>
+      <p>Our content is built with input from the communities we serve — people who've been through it and come out the other side.</p>
+    </div>
+  </div>
+
+  <div class="team-section">
+    <h2>The team</h2>
+    <p class="intro">We're financial educators, social workers, and formerly incarcerated advocates working together toward one goal.</p>
+    <div class="team-grid">
+      <div class="team-card"><div class="team-avatar">MJ</div><div><div class="team-name">Marcus Johnson</div><div class="team-role">Founder & Executive Director</div></div></div>
+      <div class="team-card"><div class="team-avatar">LP</div><div><div class="team-name">Lisa Pham</div><div class="team-role">Head of Financial Education</div></div></div>
+      <div class="team-card"><div class="team-avatar">DR</div><div><div class="team-name">Deja Robinson</div><div class="team-role">Reentry Programs Lead</div></div></div>
+      <div class="team-card"><div class="team-avatar">TW</div><div><div class="team-name">Terrence Williams</div><div class="team-role">Community Outreach</div></div></div>
+      <div class="team-card"><div class="team-avatar">AK</div><div><div class="team-name">Amara Kofi</div><div class="team-role">Partnerships & Resources</div></div></div>
+      <div class="team-card"><div class="team-avatar">JM</div><div><div class="team-name">Janet Mills</div><div class="team-role">Social Work & Counseling</div></div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="get-started.html">Contact</a></li>
+  </ul>
+  <div>© 2026 ClearPath Financial. All rights reserved.</div>
+</footer>
+</body>
+</html>

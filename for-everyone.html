@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For Everyone — ClearPath Financial</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ivory: #F9F7F2; --charcoal: #1C1C1A; --mid: #6B6B65; --accent: #2E6B4F; --accent-light: #E5F0EB; --gold: #B07D35; --border: rgba(28,28,26,0.10); }
+  body { font-family: 'DM Sans', sans-serif; background: var(--ivory); color: var(--charcoal); font-size: 16px; line-height: 1.7; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--border); background: var(--ivory); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--accent); letter-spacing: -0.01em; text-decoration: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; color: var(--mid); font-weight: 400; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--charcoal); }
+  .nav-links a.active { color: var(--accent); font-weight: 500; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 100px; }
+  .page-hero { padding: 5rem 2.5rem 3rem; max-width: 800px; margin: 0 auto; }
+  .section-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .page-hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+  .page-hero h1 em { font-style: italic; color: var(--accent); }
+  .page-hero p { font-size: 18px; color: var(--mid); max-width: 600px; }
+  .content { max-width: 1100px; margin: 0 auto; padding: 3rem 2.5rem 5rem; }
+  .topic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; }
+  .topic-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 2rem; }
+  .topic-card h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+  .topic-card h2 span { font-size: 1.5rem; }
+  .topic-card > p { font-size: 14px; color: var(--mid); margin-bottom: 1.5rem; line-height: 1.65; }
+  .tip-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .tip-list li { font-size: 14px; color: var(--charcoal); padding: 12px 16px; background: var(--ivory); border-radius: 10px; border-left: 3px solid var(--accent); line-height: 1.5; }
+  .tip-list li strong { display: block; font-weight: 500; margin-bottom: 2px; }
+  .callout { background: var(--accent); border-radius: 20px; padding: 3rem; color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+  .callout h2 { font-family: 'DM Serif Display', serif; font-size: 1.75rem; margin-bottom: 0.5rem; }
+  .callout p { color: rgba(255,255,255,0.8); font-size: 15px; }
+  .btn-white { background: #fff; color: var(--accent); padding: 13px 28px; border-radius: 100px; border: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; white-space: nowrap; }
+  footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mid); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { text-decoration: none; color: var(--mid); }
+  @media (max-width: 768px) { .topic-grid { grid-template-columns: 1fr; } .callout { flex-direction: column; } nav { padding: 1rem 1.25rem; } .nav-links { display: none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="for-everyone.html" class="active">For Everyone</a></li>
+    <li><a href="reentry.html">Reentry Support</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="get-started.html" class="nav-cta">Get started</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-tag">Financial basics</div>
+  <h1>Money skills for <em>real life</em></h1>
+  <p>No matter your starting point, these practical tips will help you take control of your money and build toward something better.</p>
+</div>
+
+<div class="content">
+  <div class="topic-grid">
+    <div class="topic-card">
+      <h2>Budgeting basics</h2>
+      <p>A budget isn't about restriction — it's about knowing where your money goes so you can make intentional choices.</p>
+      <ul class="tip-list">
+        <li><strong>Track every dollar for 30 days</strong>Write down or use a free app to track every purchase. Awareness is the first step.</li>
+        <li><strong>Use the 50/30/20 rule</strong>50% on needs, 30% on wants, 20% on savings or debt payoff. Adjust based on your income.</li>
+        <li><strong>Pay yourself first</strong>Before spending on anything, set aside even $10–$20 into savings. Small amounts build habits.</li>
+        <li><strong>Cut subscriptions you forgot about</strong>Check your bank statement for recurring charges. Cancel what you don't use.</li>
+      </ul>
+    </div>
+
+    <div class="topic-card">
+      <h2>Understanding credit</h2>
+      <p>Your credit score affects your ability to rent a home, get a job, and borrow money. Here's how to improve it.</p>
+      <ul class="tip-list">
+        <li><strong>Check your credit report for free</strong>Go to AnnualCreditReport.com — you're entitled to a free report from all three bureaus every year.</li>
+        <li><strong>Pay on time, every time</strong>Payment history is 35% of your score. Even minimum payments protect your score.</li>
+        <li><strong>Keep balances low</strong>Try to use less than 30% of your available credit limit on each card.</li>
+        <li><strong>Don't open too many accounts at once</strong>Each application creates a hard inquiry which can temporarily lower your score.</li>
+      </ul>
+    </div>
+
+    <div class="topic-card">
+      <h2>Saving on a tight income</h2>
+      <p>You don't need a high income to start saving. Small consistent habits add up faster than you think.</p>
+      <ul class="tip-list">
+        <li><strong>Start with $5 a week</strong>That's $260 a year. It's not about the amount — it's about the habit.</li>
+        <li><strong>Use a free savings account</strong>Look for accounts with no minimum balance and no fees. Online banks like Chime are good options.</li>
+        <li><strong>Save windfalls automatically</strong>Tax refund? Birthday money? Put at least half into savings before spending any of it.</li>
+        <li><strong>Build a $500 emergency fund first</strong>This is your safety net. Before paying extra on debt, save $500 for unexpected expenses.</li>
+      </ul>
+    </div>
+
+    <div class="topic-card">
+      <h2>Avoiding scams & predatory lending</h2>
+      <p>Payday loans, rent-to-own stores, and financial scams target people in vulnerable situations. Know the warning signs.</p>
+      <ul class="tip-list">
+        <li><strong>Avoid payday loans</strong>They charge 300–400% interest annually. A $300 loan can turn into $1,000+ of debt quickly.</li>
+        <li><strong>If it sounds too good, it is</strong>Any offer promising fast cash, debt elimination, or guaranteed approval is almost always a scam.</li>
+        <li><strong>Never pay upfront for a loan</strong>Legitimate lenders do not charge fees before giving you money.</li>
+        <li><strong>Look for nonprofit credit counselors</strong>The NFCC (nfcc.org) connects you with free, certified credit counselors.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div>
+      <h2>Ready to make a plan?</h2>
+      <p>Tell us about your situation and we'll help you build a personalized roadmap.</p>
+    </div>
+    <a href="get-started.html" class="btn-white">Get started free</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="logo">ClearPath Financial</a>
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="get-started.html">Contact</a></li>
+  </ul>
+  <div>© 2026 ClearPath Financial. All rights reserved.</div>
+</footer>
+</body>
+</html>
